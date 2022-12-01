@@ -1,25 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { FC, useEffect } from 'react';
 import './App.css';
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
-function App() {
+import Signup from './components/Signup-V2'
+import Login from './components/Login';
+import Dashboard from './components/Dashboard'
+
+import Device from './components/Device'
+import Profile from './components/Profile'
+import Service from './components/Service'
+import Setting from './components/Setting'
+
+// import {getUserById} from './store/actions/authActions'
+// import { getAuth, onAuthStateChanged } from "firebase/auth";
+
+const App: FC = () => {
+
+  // useEffect(() => {
+  //   const auth = getAuth();
+  //   onAuthStateChanged(auth, (user) => {
+  //     try {
+  //       if (user) {
+  //         const res = async(uid: string) => {
+  //           return await getUserById(uid)
+  //         }
+  //         console.log('user-info', user.providerData)
+  //         return res
+  //       }
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   });
+  // },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/auth/login" element={<Login />} />
+        <Route path="/auth/signup" element={<Signup />} />
+        <Route path='/admin/dashboard' element={<Dashboard />} />
+
+        <Route path='/auth/profile' element={<Profile />} />
+        <Route path='/admin/thiet-bi' element={<Device />} />
+        <Route path='/admin/service' element={<Service />} />
+        {/* <Route path='/admin/setting' element={<Setting />} /> */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 

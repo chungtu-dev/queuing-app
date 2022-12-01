@@ -1,0 +1,42 @@
+[
+  {
+    "name":"Kiosk",
+    "status": "Approved",
+    "date": "24.Jan.2021",
+    "progress": 75.5,
+    "idser": "KIO_01",
+    "loading": "Hoạt động"
+  },
+  {
+    "name":"Kiosk",
+    "status": "Disable",
+    "date": "30.Dec.2021",
+    "progress": 25.5,
+    "idser": "KIO_02",
+    "loading": "Ngưng hoạt động"
+  },
+  {
+    "name":"Kiosk",
+    "status": "Error",
+    "date": "20.May.2021",
+    "progress": 90,
+    "idser": "KIO_03",
+    "loading": "Ngưng hoạt động"
+  },
+  {
+    "name":"Kiosk",
+    "status": "Approved",
+    "date": "12.Jul.2021",
+    "progress": 50.5,
+    "idser": "KIO_04",
+    "loading": "Hoạt động"
+  },
+  {
+    "name":"Kiosk",
+    "status": "Error",
+    "date": "20.May.2021",
+    "progress": 90,
+    "idser": "KIO_05",
+    "loading": "Ngưng hoạt động"
+  }
+]
